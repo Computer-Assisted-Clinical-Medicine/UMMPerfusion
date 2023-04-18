@@ -2,6 +2,8 @@
 Open Source Perfusion Analysis Pluin for OsiriX 5.6 and Horos 3.3.5
 
 Algorithms used in this plugin are based on the work of S.Sourbron: 
+Platform for Research in Medical Imgaging
+https://github.com/plaresmedima/PMI-0.4
 
 if you use this code and the plugin pleae cite:
 
