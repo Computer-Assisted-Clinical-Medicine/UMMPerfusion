@@ -5,7 +5,7 @@ Algorithms used in this plugin are based on the work of S.Sourbron:
 Platform for Research in Medical Imgaging
 https://github.com/plaresmedima/PMI-0.4
 
-if you use this code and the plugin pleae cite:
+If you use this code and the plugin please cite:
 
 F. Zöllner, G. Weisser, M. Reich, S. Kaiser, S. Schoenberg, S. Sourbron and L. Schad.
 UMMPerfusion: An Open Source software tool for quantitative MRI perfusion analysis in clinical routine.
