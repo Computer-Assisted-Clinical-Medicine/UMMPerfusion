@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>41B5DEFE-D5D2-4968-8FA4-AC1E9EE22634</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UMMPerfusion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8376DCD3-510C-45BC-A3C1-BFDBD5893297</key>
+		<string>svn://ikrsrv1.medma.uni-heidelberg.de/subversion/UMMPerfusion/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>version_1.5.2.1/UMMPerfusion.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8376DCD3-510C-45BC-A3C1-BFDBD5893297</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>8376DCD3-510C-45BC-A3C1-BFDBD5893297</key>
+		<string>svn://ikrsrv1.medma.uni-heidelberg.de/subversion</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://ikrsrv1.medma.uni-heidelberg.de/subversion/UMMPerfusion/trunk/version_1.5.2/UMMPerfusion.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8376DCD3-510C-45BC-A3C1-BFDBD5893297</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>UMMPerfusion/branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>UMMPerfusion/tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>UMMPerfusion/trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8376DCD3-510C-45BC-A3C1-BFDBD5893297</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UMMPerfusion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

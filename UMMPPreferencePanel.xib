@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="12F2542" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="UMMPPrefController">
+            <connections>
+                <outlet property="_general" destination="837" id="1538"/>
+                <outlet property="_mapSelections" destination="843" id="1539"/>
+                <outlet property="_mpFit" destination="836" id="1537"/>
+                <outlet property="_presetValues" destination="835" id="1536"/>
+                <outlet property="_toolbar" destination="823" id="1531"/>
+                <outlet property="compartmentMapAFE" destination="1475" id="1556"/>
+                <outlet property="compartmentMapCS" destination="1485" id="1557"/>
+                <outlet property="compartmentMapPF" destination="1405" id="1553"/>
+                <outlet property="compartmentMapPMTT" destination="1415" id="1554"/>
+                <outlet property="compartmentMapPV" destination="1425" id="1555"/>
+                <outlet property="exchangeMapAFE" destination="1476" id="1558"/>
+                <outlet property="exchangeMapCS" destination="1486" id="1559"/>
+                <outlet property="exchangeMapEF" destination="1456" id="1560"/>
+                <outlet property="exchangeMapIMTT" destination="1436" id="1561"/>
+                <outlet property="exchangeMapIV" destination="1446" id="1562"/>
+                <outlet property="exchangeMapPF" destination="1407" id="1563"/>
+                <outlet property="exchangeMapPMTT" destination="1416" id="1564"/>
+                <outlet property="exchangeMapPSAP" destination="1466" id="1565"/>
+                <outlet property="exchangeMapPV" destination="1426" id="1566"/>
+                <outlet property="filtrationMapAFE" destination="1477" id="1567"/>
+                <outlet property="filtrationMapCS" destination="1487" id="1568"/>
+                <outlet property="filtrationMapEF" destination="1457" id="1569"/>
+                <outlet property="filtrationMapIMTT" destination="1437" id="1570"/>
+                <outlet property="filtrationMapPF" destination="1409" id="1571"/>
+                <outlet property="filtrationMapPMTT" destination="1417" id="1572"/>
+                <outlet property="filtrationMapPSAP" destination="1467" id="1573"/>
+                <outlet property="filtrationMapPV" destination="1427" id="1574"/>
+                <outlet property="maxFunctionEvaluation" destination="1542" id="1548"/>
+                <outlet property="maxIterations" destination="1545" id="1549"/>
+                <outlet property="parametersTableView" destination="1018" id="1589"/>
+                <outlet property="presetsTableView" destination="1052" id="1588"/>
+                <outlet property="printPresetsToConsole" destination="1525" id="1647"/>
+                <outlet property="removeButton" destination="1000" id="1590"/>
+                <outlet property="selectedAlgorithm" destination="1016" id="1591"/>
+                <outlet property="soundOnAllMapsCalcEnd" destination="1527" id="1648"/>
+                <outlet property="soundOnMapsCalcEnd" destination="1523" id="1649"/>
+                <outlet property="toftsMapAFE" destination="1479" id="1575"/>
+                <outlet property="toftsMapCS" destination="1489" id="1576"/>
+                <outlet property="toftsMapIMTT" destination="1439" id="1577"/>
+                <outlet property="toftsMapIV" destination="1449" id="1578"/>
+                <outlet property="toftsMapPSAP" destination="1469" id="1579"/>
+                <outlet property="toftsMapPV" destination="1429" id="1580"/>
+                <outlet property="uptakeMapAFE" destination="1478" id="1581"/>
+                <outlet property="uptakeMapCS" destination="1488" id="1582"/>
+                <outlet property="uptakeMapEF" destination="1458" id="1583"/>
+                <outlet property="uptakeMapPF" destination="1411" id="1584"/>
+                <outlet property="uptakeMapPMTT" destination="1418" id="1585"/>
+                <outlet property="uptakeMapPSAP" destination="1468" id="1586"/>
+                <outlet property="uptakeMapPV" destination="1428" id="1587"/>
+                <outlet property="window" destination="367" id="1530"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="367" userLabel="Preferences">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="850" y="512" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <view key="contentView" id="368">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="F2A26949-79E3-4AA4-BE2A-2DC5D0DD0B84" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="823">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="DCC2276C-A9EF-4434-AE61-13E7351C7E00" explicitItemIdentifier="preset" label="Preset Values" paletteLabel="Preset Values" tag="1" image="curve" autovalidates="NO" selectable="YES" id="1670">
+                        <connections>
+                            <action selector="changeView:" target="-2" id="1671"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6C6A388A-591D-4100-B386-800F802436EC" explicitItemIdentifier="mpfit" label="MPFit" paletteLabel="MPFit" tag="3" image="NSAdvanced" autovalidates="NO" selectable="YES" id="831">
+                        <connections>
+                            <action selector="changeView:" target="-2" id="1533"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="491D74C2-9F05-4D01-B51B-4C3821940CCA" explicitItemIdentifier="general" label="General" paletteLabel="General" image="NSPreferencesGeneral" autovalidates="NO" selectable="YES" id="832">
+                        <connections>
+                            <action selector="changeView:" target="-2" id="1532"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="4055C4F7-C6E2-49A6-A7B1-DDFF983D0961" explicitItemIdentifier="map" label="Map selection" paletteLabel="Map selection" tag="2" image="UMMPViewer" autovalidates="NO" selectable="YES" id="833">
+                        <connections>
+                            <action selector="changeView:" target="-2" id="1535"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="22504491-871D-46F6-8501-38BDEA67387A" explicitItemIdentifier="aifimport" label="AIF Import" paletteLabel="AIF Import" tag="4" image="import" autovalidates="NO" selectable="YES" id="830" userLabel="Toolbar Item - AIF import">
+                        <connections>
+                            <action selector="changeView:" target="-2" id="1672"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="832"/>
+                    <toolbarItem reference="833"/>
+                    <toolbarItem reference="831"/>
+                    <toolbarItem reference="1670"/>
+                    <toolbarItem reference="830"/>
+                </defaultToolbarItems>
+            </toolbar>
+        </window>
+        <customView id="835" userLabel="Preset Values">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="309"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="844">
+                    <rect key="frame" x="17" y="16" width="753" height="275"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="751" height="273"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="998">
+                                <rect key="frame" x="41" y="43" width="100" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <clipView key="contentView" id="fvd-yP-ekZ">
+                                    <rect key="frame" x="1" y="17" width="98" height="176"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="1050" id="1052">
+                                            <rect key="frame" x="0.0" y="0.0" width="98" height="176"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="name" width="95" minWidth="40" maxWidth="1000" id="1053">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Presets">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1054">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-2" id="1597"/>
+                                                <outlet property="delegate" destination="-2" id="1598"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="1051">
+                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1049">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="1050">
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="17"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <button toolTip="Add a new set of parameters (initially, default values are used)" verticalHuggingPriority="750" id="999">
+                                <rect key="frame" x="41" y="13" width="21" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Gradient Button" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1048">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addPresetItem:" target="-2" id="1596"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Remove the selected set of preset parameters." verticalHuggingPriority="750" id="1000">
+                                <rect key="frame" x="61" y="13" width="21" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Gradient Button" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1047">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="removePresetItem:" target="-2" id="1593"/>
+                                </connections>
+                            </button>
+                            <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="1001">
+                                <rect key="frame" x="153" y="39" width="571" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="569" height="196"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="1017">
+                                            <rect key="frame" x="18" y="14" width="533" height="132"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <clipView key="contentView" id="oOH-1J-3aM">
+                                                <rect key="frame" x="1" y="17" width="531" height="114"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="1021" id="1018">
+                                                        <rect key="frame" x="0.0" y="0.0" width="531" height="114"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <size key="intercellSpacing" width="3" height="2"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                        <tableColumns>
+                                                            <tableColumn identifier="name" editable="NO" width="101" minWidth="40" maxWidth="1000" id="1027">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1031">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="pValue" width="70" minWidth="40" maxWidth="1000" id="1028">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Value">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1029">
+                                                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" minimumFractionDigits="3" maximumFractionDigits="3" id="1030"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="fixed" width="41" minWidth="10" maxWidth="3.4028234663852886e+38" id="1026">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Fixed">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" alignment="left" inset="2" id="1032">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="limitedHigh" width="81" minWidth="10" maxWidth="3.4028234663852886e+38" id="1025">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Limited High">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" alignment="left" inset="2" id="1033">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="high" width="70" minWidth="10" maxWidth="3.4028234663852886e+38" id="1024">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="High">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1034">
+                                                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" minimumFractionDigits="3" maximumFractionDigits="3" id="1035"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="limitedLow" width="77" minWidth="10" maxWidth="3.4028234663852886e+38" id="1023">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Limited Low">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <buttonCell key="dataCell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="only" alignment="left" inset="2" id="1036">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="low" width="70" minWidth="10" maxWidth="3.4028234663852886e+38" id="1022">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Low">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1037">
+                                                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" minimumFractionDigits="3" maximumFractionDigits="3" id="1038"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            </tableColumn>
+                                                        </tableColumns>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="-2" id="1599"/>
+                                                            <outlet property="delegate" destination="-2" id="1600"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.011299435028248588" horizontal="YES" id="1019">
+                                                <rect key="frame" x="1" y="420" width="680" height="15"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1020">
+                                                <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <tableHeaderView key="headerView" id="1021">
+                                                <rect key="frame" x="0.0" y="0.0" width="531" height="17"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </tableHeaderView>
+                                        </scrollView>
+                                        <popUpButton toolTip="Switch to other algorithm name to change its settings/values" verticalHuggingPriority="750" id="1016">
+                                            <rect key="frame" x="84" y="163" width="146" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <popUpButtonCell key="cell" type="roundTextured" title="Compartment" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="1045" id="1039">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <menu key="menu" title="OtherViews" id="1040">
+                                                    <items>
+                                                        <menuItem title="Compartment" state="on" id="1045"/>
+                                                        <menuItem title="2C Exchange" id="1044"/>
+                                                        <menuItem title="2C Filtration" id="1041"/>
+                                                        <menuItem title="2C Uptake" id="1043">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                        <menuItem title="Modified Tofts" id="1042">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="pushAlgorithmButton:" target="-2" id="1592"/>
+                                            </connections>
+                                        </popUpButton>
+                                        <textField verticalHuggingPriority="750" id="1015">
+                                            <rect key="frame" x="15" y="168" width="67" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Algorithm" id="1046">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <textField verticalHuggingPriority="750" id="1002">
+                                <rect key="frame" x="26" y="245" width="172" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Parameters for Curve Fit:" id="1014">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton toolTip="Import/export the selected preset" verticalHuggingPriority="750" id="1005">
+                                <rect key="frame" x="108" y="13" width="61" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="1008" id="1006">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="1007">
+                                        <items>
+                                            <menuItem state="on" image="NSActionTemplate" hidden="YES" id="1008">
+                                                <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                            </menuItem>
+                                            <menuItem title="Import" id="1009">
+                                                <connections>
+                                                    <action selector="importPreset:" target="-2" id="1595"/>
+                                                </connections>
+                                            </menuItem>
+                                            <menuItem title="Export" id="1010">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                <connections>
+                                                    <action selector="exportPreset:" target="-2" id="1594"/>
+                                                </connections>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+        </customView>
+        <customView id="836" userLabel="MPFit">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="224"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="849">
+                    <rect key="frame" x="17" y="16" width="390" height="190"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="388" height="188"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" id="1126">
+                                <rect key="frame" x="127" y="114" width="246" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(max. number of function evaluations)" id="1127">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1131">
+                                <rect key="frame" x="127" y="65" width="178" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(max. number of iterations)" id="1132">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1135">
+                                <rect key="frame" x="15" y="159" width="101" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" MPFit settings:" id="1136">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1164">
+                                <rect key="frame" x="15" y="114" width="51" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxfev" id="1165">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1168">
+                                <rect key="frame" x="15" y="65" width="53" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxiter" id="1169">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField identifier="maxfev" verticalHuggingPriority="750" id="1542">
+                                <rect key="frame" x="71" y="111" width="51" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="1000" drawsBackground="YES" id="1543">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0" negativeFormat="#,##0" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" decimalSeparator="." currencyDecimalSeparator="." id="1544">
+                                        <real key="minimum" value="0.0"/>
+                                    </numberFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="changeMPFitValues:" target="-2" id="1653"/>
+                                </connections>
+                            </textField>
+                            <textField identifier="maxiter" verticalHuggingPriority="750" id="1545">
+                                <rect key="frame" x="71" y="62" width="51" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="200" drawsBackground="YES" id="1546">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0" negativeFormat="#,##0" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" id="1547">
+                                        <real key="minimum" value="1"/>
+                                        <real key="maximum" value="999"/>
+                                    </numberFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="changeMPFitValues:" target="-2" id="1654"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" id="1665">
+                                <rect key="frame" x="18" y="12" width="81" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundTextured" title="set default" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1666">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushSetDefaultMPFitButton:" target="-2" id="1667"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+        </customView>
+        <customView id="837" userLabel="General">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="854">
+                    <rect key="frame" x="17" y="16" width="440" height="112"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="438" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button identifier="soundOnMapsCalcEnd" id="1523">
+                                <rect key="frame" x="16" y="81" width="406" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Play a notification sound when maps calculation has finished" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1524">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushButtonOnGeneralSettings:" target="-2" id="1650"/>
+                                </connections>
+                            </button>
+                            <button id="1525">
+                                <rect key="frame" x="16" y="21" width="406" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Print preset parameters to console" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1526">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushButtonOnGeneralSettings:" target="-2" id="1652"/>
+                                </connections>
+                            </button>
+                            <button identifier="soundOnAllMapsCalcEnd" id="1527">
+                                <rect key="frame" x="16" y="61" width="406" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Play a notification sound when all maps have been exported" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1528">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushButtonOnGeneralSettings:" target="-2" id="1651"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+        </customView>
+        <customView id="843" userLabel="Map selection">
+            <rect key="frame" x="0.0" y="0.0" width="829" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="859">
+                    <rect key="frame" x="17" y="16" width="795" height="356"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="793" height="354"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" id="1233">
+                                <rect key="frame" x="280" y="295" width="91" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Compartment" id="1234">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1314">
+                                <rect key="frame" x="387" y="295" width="86" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2C Exchange" id="1315">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1327">
+                                <rect key="frame" x="486" y="295" width="82" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2C Filtration" id="1328">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1335">
+                                <rect key="frame" x="586" y="295" width="70" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2C Uptake" id="1336">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="1343">
+                                <rect key="frame" x="673" y="295" width="96" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Modified Tofts" id="1344">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button focusRingType="none" id="1387">
+                                <rect key="frame" x="29" y="263" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Plasma Flow (ml/100ml/min)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1404">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1388">
+                                <rect key="frame" x="10" y="101" width="264" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Permeable surface area product (ml/100ml/min)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1403">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1389">
+                                <rect key="frame" x="29" y="128" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Extraction Fraction (%)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1402">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1390">
+                                <rect key="frame" x="29" y="155" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Interstitial Volume (ml/100ml)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1401">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1391">
+                                <rect key="frame" x="29" y="182" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Interstitial MTT (sec)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1400">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1392">
+                                <rect key="frame" x="29" y="209" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Plasma Volume (ml/100ml)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1399">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1393">
+                                <rect key="frame" x="29" y="236" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Plasma MTT (sec)" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1398">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1394">
+                                <rect key="frame" x="29" y="47" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Chi Square" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1397">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" id="1395">
+                                <rect key="frame" x="29" y="74" width="245" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Corrected Akaike Information Criterion" bezelStyle="regularSquare" alignment="right" controlSize="small" state="on" focusRingType="none" inset="2" id="1396">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button id="1405">
+                                <rect key="frame" x="317" y="266" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPcompartmentMapPF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1406">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1607"/>
+                                </connections>
+                            </button>
+                            <button id="1407">
+                                <rect key="frame" x="422" y="266" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapPF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1408">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1612"/>
+                                </connections>
+                            </button>
+                            <button id="1409">
+                                <rect key="frame" x="519" y="266" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapPF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1410">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1624"/>
+                                </connections>
+                            </button>
+                            <button id="1411">
+                                <rect key="frame" x="613" y="266" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapPF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1412">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1632"/>
+                                </connections>
+                            </button>
+                            <button id="1415">
+                                <rect key="frame" x="317" y="239" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPcompartmentMapPMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1424">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1608"/>
+                                </connections>
+                            </button>
+                            <button id="1416">
+                                <rect key="frame" x="422" y="239" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapPMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1423">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1613"/>
+                                </connections>
+                            </button>
+                            <button id="1417">
+                                <rect key="frame" x="519" y="239" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapPMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1422">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1625"/>
+                                </connections>
+                            </button>
+                            <button id="1418">
+                                <rect key="frame" x="613" y="239" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapPMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1421">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1633"/>
+                                </connections>
+                            </button>
+                            <button id="1425">
+                                <rect key="frame" x="317" y="212" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPcompartmentMapPV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1434">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1609"/>
+                                </connections>
+                            </button>
+                            <button id="1426">
+                                <rect key="frame" x="422" y="212" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapPV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1433">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1614"/>
+                                </connections>
+                            </button>
+                            <button id="1427">
+                                <rect key="frame" x="519" y="212" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapPV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1432">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1626"/>
+                                </connections>
+                            </button>
+                            <button id="1428">
+                                <rect key="frame" x="613" y="212" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapPV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1431">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1634"/>
+                                </connections>
+                            </button>
+                            <button id="1429">
+                                <rect key="frame" x="713" y="212" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapPV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1430">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1640"/>
+                                </connections>
+                            </button>
+                            <button id="1436">
+                                <rect key="frame" x="422" y="185" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapIMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1443">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1616"/>
+                                </connections>
+                            </button>
+                            <button id="1437">
+                                <rect key="frame" x="528" y="185" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapIMTT" bezelStyle="regularSquare" imagePosition="only" alignment="center" state="on" inset="2" id="1442">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1627"/>
+                                </connections>
+                            </button>
+                            <button id="1439">
+                                <rect key="frame" x="713" y="185" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapIMTT" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1440">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1641"/>
+                                </connections>
+                            </button>
+                            <button id="1446">
+                                <rect key="frame" x="422" y="158" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapIV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1453">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1617"/>
+                                </connections>
+                            </button>
+                            <button id="1449">
+                                <rect key="frame" x="713" y="158" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapIV" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1450">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1642"/>
+                                </connections>
+                            </button>
+                            <button id="1456">
+                                <rect key="frame" x="422" y="131" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapEF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1463">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1618"/>
+                                </connections>
+                            </button>
+                            <button id="1457">
+                                <rect key="frame" x="519" y="131" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapEF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1462">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1628"/>
+                                </connections>
+                            </button>
+                            <button id="1458">
+                                <rect key="frame" x="613" y="131" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapEF" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1461">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1636"/>
+                                </connections>
+                            </button>
+                            <button id="1466">
+                                <rect key="frame" x="422" y="104" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapPSAP" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1473">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1621"/>
+                                </connections>
+                            </button>
+                            <button id="1467">
+                                <rect key="frame" x="519" y="104" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapPSAP" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1472">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1629"/>
+                                </connections>
+                            </button>
+                            <button id="1468">
+                                <rect key="frame" x="613" y="104" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapPSAP" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1471">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1637"/>
+                                </connections>
+                            </button>
+                            <button id="1469">
+                                <rect key="frame" x="713" y="104" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapPSAP" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1470">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1644"/>
+                                </connections>
+                            </button>
+                            <button id="1475">
+                                <rect key="frame" x="317" y="77" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPcompartmentMapAFE" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1484">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1610"/>
+                                </connections>
+                            </button>
+                            <button id="1476">
+                                <rect key="frame" x="422" y="77" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapAFE" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1483">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1622"/>
+                                </connections>
+                            </button>
+                            <button id="1477">
+                                <rect key="frame" x="519" y="77" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapAFE" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1482">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1630"/>
+                                </connections>
+                            </button>
+                            <button id="1478">
+                                <rect key="frame" x="613" y="77" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapAFE" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1481">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1638"/>
+                                </connections>
+                            </button>
+                            <button id="1479">
+                                <rect key="frame" x="713" y="77" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapAFE" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1480">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1645"/>
+                                </connections>
+                            </button>
+                            <button id="1485">
+                                <rect key="frame" x="317" y="50" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPcompartmentMapCS" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1494">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1611"/>
+                                </connections>
+                            </button>
+                            <button id="1486">
+                                <rect key="frame" x="422" y="50" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPexchangeMapCS" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1493">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1623"/>
+                                </connections>
+                            </button>
+                            <button id="1487">
+                                <rect key="frame" x="519" y="50" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPfiltrationMapCS" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1492">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1631"/>
+                                </connections>
+                            </button>
+                            <button id="1488">
+                                <rect key="frame" x="613" y="50" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPuptakeMapCS" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1491">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1639"/>
+                                </connections>
+                            </button>
+                            <button id="1489">
+                                <rect key="frame" x="713" y="50" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="UMMPtoftsMapCS" bezelStyle="regularSquare" imagePosition="only" alignment="left" state="on" inset="2" id="1490">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushMapSelButtonState:" target="-2" id="1646"/>
+                                </connections>
+                            </button>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1500">
+                                <rect key="frame" x="14" y="287" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1501">
+                                <rect key="frame" x="14" y="259" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1502">
+                                <rect key="frame" x="14" y="232" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1503">
+                                <rect key="frame" x="14" y="204" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1504">
+                                <rect key="frame" x="14" y="178" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1505">
+                                <rect key="frame" x="14" y="150" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1506">
+                                <rect key="frame" x="14" y="125" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1507">
+                                <rect key="frame" x="14" y="97" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1508">
+                                <rect key="frame" x="14" y="71" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1509">
+                                <rect key="frame" x="14" y="43" width="760" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1510">
+                                <rect key="frame" x="772" y="45" width="5" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1511">
+                                <rect key="frame" x="273" y="45" width="5" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="1512">
+                                <rect key="frame" x="10" y="45" width="5" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField verticalHuggingPriority="750" id="1513">
+                                <rect key="frame" x="29" y="325" width="97" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Map Selection" id="1514">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" id="1659">
+                                <rect key="frame" x="705" y="12" width="70" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundTextured" title="select all" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1660">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushSelectAllButton:" target="-2" id="1663"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" id="1661">
+                                <rect key="frame" x="612" y="12" width="85" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundTextured" title="deselect all" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1662">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushDeselectAllButton:" target="-2" id="1664"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSAddTemplate" width="8" height="8"/>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="NSRemoveTemplate" width="8" height="8"/>
+        <image name="UMMPViewer" width="32" height="32"/>
+        <image name="curve" width="32" height="32"/>
+        <image name="import" width="32" height="32"/>
+    </resources>
+</document>
