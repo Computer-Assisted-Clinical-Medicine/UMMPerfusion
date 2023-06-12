@@ -1,5 +1,5 @@
 # UMMPerfusion
-Open Source Perfusion Analysis Pluin for OsiriX and Horos
+Open Source Perfusion Analysis Plugin for OsiriX and Horos
 
 Algorithms used in this plugin are based on the work of S.Sourbron: Platform for Research in Medical Imgaging https://github.com/plaresmedima/PMI-0.4
 
