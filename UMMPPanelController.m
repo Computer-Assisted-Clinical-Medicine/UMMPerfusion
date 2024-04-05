@@ -50,7 +50,7 @@ BOOL pluginClose = true;
 @synthesize timeArray;
 @synthesize dTimeArray;
 
-#define _PLUGIN_VERSION_ @"v1.5.3.1"
+#define _PLUGIN_VERSION_ @"v1.5.3.2"
 
 #pragma mark -
 #pragma mark init and dealloc
@@ -151,7 +151,7 @@ BOOL pluginClose = true;
             } else {
                 int returnValue = NSRunAlertPanel(@"Final warning!!", @"You are using an old version of UMMPerfusion preset parameters. This may cause problems while calculating. To void this, please go to the preference window and add a new set of presets. For further information see this website: http://ikrsrv1.medma.uni-heidelberg.de/redmine/projects/ummperfusion/wiki", @"open website", @"OK", nil);
                 if (returnValue) {
-                    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://ikrsrv1.medma.uni-heidelberg.de/redmine/projects/ummperfusion/wiki"]];
+                    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://github.com/Computer-Assisted-Clinical-Medicine/UMMPerfusion/wiki"]];
                 }
                 
             }
@@ -680,7 +680,7 @@ BOOL pluginClose = true;
 
 - (IBAction)pushHelpButton:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://ikrsrv1.medma.uni-heidelberg.de/redmine/projects/ummperfusion/wiki"]];
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://github.com/Computer-Assisted-Clinical-Medicine/UMMPerfusion/wiki"]];
 }
 
 #pragma mark -
@@ -882,7 +882,7 @@ BOOL pluginClose = true;
         [self calculateTimeUsingAcquisitionTime2D];
     }
     
-    else if ([manufacturerVal isEqualToString:@"SIEMENS"])
+    else if ([manufacturerVal isEqualToString:@"SIEMENS"] || [manufacturerVal isEqualToString:@"Siemens Healthineers"])
     {
         printf( "Manufacturer: SIEMENS\n" );
         if ([modalityVal isEqualToString:@"MR"])
